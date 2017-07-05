@@ -13,7 +13,7 @@ settings_project_name = 'Linee guida di design per i servizi web della PA'
 settings_copyright_copyleft = 'CC-BY 3.0 - Agenzia per l\'Italia Digitale'
 settings_editor_name = 'AgID - Agenzia per l\'Italia Digitale'
 settings_doc_version = get_latest_release('pdavide', 'version-test')
-settings_doc_release = '1.0'
+settings_doc_release = settings_doc_version
 settings_basename = 'LineeGuidaWebPA'
 settings_file_name = 'Linee-Guida-Web-PA'
 
@@ -94,6 +94,7 @@ else:
             '_static/css/custom.css',
         ],
     }
+    
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
