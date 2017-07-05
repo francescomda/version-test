@@ -1,6 +1,5 @@
 {# TEMPLATE VAR SETTINGS #} {%- set url_root = pathto('', 1) %} {%- if url_root == '#' %}{% set url_root = '' %}{% endif %} {%- if not embedded and docstitle %} {%- set titlesuffix = " &mdash; "|safe + docstitle|e %} {%- else %} {%- set titlesuffix =
 "" %} {%- endif %}
-{% load projects_tags %}
 
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
@@ -99,7 +98,7 @@
                     <h1 class="project-title"><a href="{{ pathto(master_doc) }}" > {{ project }} </a>
                     {% if theme_display_version %} {%- set nav_version = version %} {% if READTHEDOCS and current_version != 'stable' %} {%- set nav_version = current_version %} {% endif %}
                     {% if nav_version %}
-                    <span class="version">{{ nav_version }}</span>
+                    <br/><small>versione: </small><span class="version">{{ nav_version }}</span>
                     </h1>
                     {% endif %} {% endif %} {% endif %} {% include "searchbox.html" %} {% endblock %}
                 </div>
@@ -149,9 +148,6 @@
             {# PAGE CONTENT #}
             <div class="wy-nav-content">
                 <div class="rst-content">
-                   {% for version in active_versions %}
-                   {{ version }}
-                   {% endfor %}
                     {% include "breadcrumbs.html" %}
                     <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
                         <div itemprop="articleBody">

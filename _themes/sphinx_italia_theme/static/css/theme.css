@@ -5332,12 +5332,12 @@ div[class^='highlight'] pre {
   font-weight: 600;
   line-height: 1.2;
 }
-.wy-side-nav-search h1 > span.version {
+.wy-side-nav-search h1 span.version {
   border-radius: 2em;
   background-color: #004c99;
   vertical-align: middle;
   padding: 0 0.809em;
-  font-size: 12.8px;
+  font-size: 16.8px;
   font-weight: 400;
 }
 .wy-side-nav-search a, .wy-side-nav-search a:visited {
